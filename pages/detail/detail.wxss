@@ -1,0 +1,263 @@
+/* pages/detail/detail.wxss */
+
+/* 轮播图样式 */
+.fu{
+  width: 100%;
+  height: 500rpx;
+  display: block;
+  position: relative;
+                                              /* top: 40rpx; */
+  background: #f7fafa;
+  /* margin-bottom :60rpx; */
+  /* position: relative; */
+
+}
+
+.color{
+  width: 40px;
+  height:34px;
+  left: 680rpx;
+  top: 428rpx;
+  /* background: #dde4e6ad; */
+  position:absolute;
+}
+/* 轮播图样式 */
+
+/* 商品字段 样式 */
+/* .price{
+  width: 400px;
+  height:34px;
+
+} */
+/* page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+} */
+/* 直接设置swiper属性 */
+swiper {
+  height: 500rpx;
+}
+swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15rpx;
+  margin-bottom: 0rpx;
+}
+.detail .title {
+  font-size: 30rpx;
+  margin-bottom: 110px;
+  color: black;
+  text-align: justify;
+}
+.detail .price {
+  color:red;
+  font-size: 40rpx;
+  /* margin: 10rpx;*/
+}
+.line_flag {
+  width: 80rpx;
+  height: 1rpx;
+  display: inline-block;
+  margin: 20rpx auto;
+  background-color: gainsboro;
+  text-align: center;
+}
+.line {
+  width: 100%;
+  height: 2rpx;
+  display: inline-block;
+  margin: 20rpx 0rpx;
+  background-color: gainsboro;
+  text-align: center;
+}
+.detail-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  float: left;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100rpx;
+}
+.button-green {
+  background-color: #4caf50; /* Green */
+  font-size: 13px;
+}
+.button-red {
+  background-color: #f44336; /* 红色 */
+  font-size: 13px;
+
+}
+.image_detail {
+  width: 100%;
+}
+button {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30rpx;
+  border-radius: 0rpx;
+  width: 50%;
+  height: 100%;
+  line-height: 100rpx;
+}
+.detail-nav image {
+  width: 70rpx;
+  height: 50rpx;
+  margin: 20rpx 40rpx;
+}
+.line_nav {
+  width: 5rpx;
+  height: 100%;
+  background-color: gainsboro;
+}
+/* 占位 */
+.temp {
+  height: 100rpx;
+}
+text {
+  display: block;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  margin: 10rpx;
+}
+.text-remark {
+  display: block;
+  font-size: 15rpx;
+  margin: 10rpx;
+}
+.store{
+  color:#4caf50;
+  font-size: 40rpx;
+  margin: 10rpx;
+
+  /* margin-left: 310px; */
+  
+}
+
+
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_2216529_d6jx1n4crwm.eot?t=1606276314651'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_2216529_d6jx1n4crwm.eot?t=1606276314651#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+  url('//at.alicdn.com/t/font_2216529_d6jx1n4crwm.woff?t=1606276314651') format('woff'),
+  url('//at.alicdn.com/t/font_2216529_d6jx1n4crwm.ttf?t=1606276314651') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_2216529_d6jx1n4crwm.svg?t=1606276314651#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 25px;
+  font-style: normal;
+  /* margin-right: 10px; */
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-shoucang:before {
+  content: "\e613";
+  font-size: 25px;
+  margin-right: 10px;
+
+}
+.red{
+  color:red;
+  /* background-color: red; */
+}
+
+.icon-fenxiang:before {
+  content: "\e7c5";
+  margin-right: 15px;
+  color: #f44336;
+  /* font-size: 25px; */
+
+}
+
+.icon-icon-service:before {
+  content: "\e60b";
+  color:rgb(19, 139, 129);
+  /* font-size: 30px; */
+  margin-right: 10px;
+
+}
+
+.icon-fl-jia:before {
+  content: "\e624";
+  color:rebeccapurple;
+  /* font-size: 35px; */
+  margin-right: 10px;
+
+
+}
+
+.icon-gouwuche:before {
+  content: "\e6bc";
+  color:rgb(130, 139, 0);
+  /* font-size: 40px; */
+  margin-right: 10px;
+
+}
+
+
+
+
+
+
+/*主容器*/
+.stepper {
+	width: 100px;
+	height: 26px;
+	/*给主容器设一个边框*/
+	border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-left: 30px;
+	/* margin:0 auto; */
+}
+ 
+/*加号和减号*/
+.stepper text {
+	width: 29px;
+	line-height: 26px;
+	text-align: center;
+  float: left;
+  margin: 0 auto;
+
+}
+ 
+/*数值*/
+.stepper input {
+	width: 40px;
+	height: 26px;
+	float: left;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 12px;
+	/*给中间的input设置左右边框即可*/
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+ 
+/*普通样式*/
+.stepper .normal{
+	color: black;
+}
+ 
+/*禁用样式*/
+.stepper .disabled{
+	color: #ccc;
+}
+.goods_num{
+  margin-left: 30px;
+  font-size: 15px;
+}

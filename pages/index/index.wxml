@@ -1,17 +1,45 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-     <text class="user-motto">{{name}}</text> 
-    <text class="user-motto">{{names}}</text>
-    <text class="user-motto">{{age}}</text> 
 
+
+<view>
+ <!-- 轮播图 开始 -->
+ <!-- <div class="slideshow"> -->
+
+
+
+<swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
+  <block wx:for="{{luen}}" wx:for-index="index">
+      <navigator url="/pages/detail/detail?goods_id={{item.id}}"  hover-class="navigator-hover" interval="3000" duration="1000">
+      <swiper-item>       
+      <image src='http://hanzixing.yangwenlong.top/{{luen[index].img_path}}' class='u-img-slide' mode='aspectFill'></image>
+    </swiper-item>
+    </navigator>
+  </block>
+</swiper>
+<!-- </div> -->
+  <!-- 轮播图 结束  -->
+<!-- 面包屑 导航栏 开始 -->
+<view class='classify_list'>
+    <li class="classify {{ 0 == bian? 'red':'' }}"data-cate_id="0" bindtap="cate">首页</li>   
+    <!-- == bian ? 'red':'' -->
+    <li wx:for="daohang" class="classify {{ daohang[index].cate_id == bian ? 'red':'' }}"  data-cate_id="{{daohang[index].cate_id}}" bindtap="cate">{{daohang[index].cate_name}}</li>
+</view>
+<!-- 面包屑 导航栏  结束-->
+<!-- 商品列表 数据 -->
+
+<view class='list'>
+  <block wx:for='{{list}}' wx:key='list' wx:for-item="item">
+  <view class="list_item">
+      <navigator url='/pages/detail/detail?goods_id={{item.goods_id}}'>
+      <view class='img'>
+        <image src="http://hanzixing.yangwenlong.top/{{list[index].goods_img}}"  mode="scaleToFill"/>
+      </view>
+      <view class='info'>
+        <view class='title'>{{list[index].goods_name}}</view>
+        <view class='price'>￥{{list[index].goods_price}}</view>
+      </view>
+       </navigator>
+      <view class='clear'></view>
   </view>
+  </block>
+</view>
 </view>

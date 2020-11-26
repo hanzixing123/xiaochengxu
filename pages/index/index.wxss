@@ -19,3 +19,113 @@
 .usermotto {
   margin-top: 200px;
 }
+
+
+/*  轮播图 样式 */
+.u-wrp-bnr {
+  width: 100%;
+  height: 330rpx;
+  display: block;
+  position: relative;
+  top: 40rpx;
+  background: #ffffff;
+  margin-bottom :60rpx;
+  
+}
+.u-img-slide {
+  width: 100%;
+
+  height: inherit;
+}
+/* .ul{
+  height: 40px;
+} */
+/*  导航栏   */
+
+.crumbs-l{
+    height: 50px;
+}
+.crumbs-l li{
+  height:10px;
+  padding-right: 20%;
+  /* border:1px red solid; */
+}
+.classify_list{
+  display: flex;
+  font-size: 15px;
+  width: 100%;
+  overflow-y: scroll;
+  white-space: nowrap; 
+}
+.classify{
+  height: 100%;
+  width: 200rpx;
+  margin:35rpx;
+}
+
+.red{
+ color:red;
+
+}
+
+
+
+
+/*  商品数据  */
+.clear{
+  clear: both;
+  overflow: hidden;
+}
+navigator{
+  display:inline;
+}
+.list{
+  margin-top:10px;
+}
+ 
+.list .list_item{
+  margin-top:10px;
+  padding:10px;
+  height:100px;
+  border-bottom:1px solid #E8E8E8;
+}
+.list .list_item .img{
+  float:left;
+  width:40%;
+  height:100%;
+}
+.list .list_item .img image{
+   width:100%;
+   height:100%;
+}
+ 
+.list .list_item .info{
+  width:59%;
+  float:right;
+  height:100px;
+  position:relative;
+}
+.list .list_item .info .title{
+  color:#333;
+  margin-left:10px;
+  font-size: 14px;
+}
+ 
+.list .list_item .info .price{
+  color:#FF2727;
+  margin-left:10px;
+  margin-top:10px;
+  font-size:13px;
+}
+ 
+.list .list_item .info .num{
+  position: absolute;
+  left:0px;
+  bottom:10px;
+  color:#747474;
+  margin-left:10px;
+  font-size:15px;
+}
+
+
+

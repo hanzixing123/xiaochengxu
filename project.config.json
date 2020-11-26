@@ -48,23 +48,36 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
+    "plugin": {
       "list": []
     },
     "game": {
-      "list": []
-    },
-    "plugin": {
       "list": []
     },
     "gamePlugin": {
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [
+        {
+          "name": "商品详细",
+          "pathName": "pages/detail/detail",
+          "query": "goods_id=1",
+          "scene": null
+        },
+        {
+          "name": "登录页面",
+          "pathName": "pages/users/users",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "购物车",
+          "pathName": "pages/car/car",
+          "query": "",
+          "scene": null
+        }
+      ]
     }
   }
 }
