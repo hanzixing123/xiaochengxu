@@ -129,7 +129,7 @@ Page({
   },
   // 跳到购物车
   toCar() {
-    wx.switchTab({
+    wx.reLaunch({
       url: '/pages/car/car'
     })
   },
@@ -150,11 +150,9 @@ Page({
   },
 // 客服
 kefu() {
-  wx.showToast({
-    title: '当前功能未开发.....',
-    icon: 'close',
-    duration: 2000
-  });
+  wx.makePhoneCall({
+    phoneNumber: '13521378470'
+  })
 },
   
   /**

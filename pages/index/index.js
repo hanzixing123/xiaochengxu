@@ -30,7 +30,7 @@ Page({
  wx.request({ //导航栏
   url: 'http://hanzixing.yangwenlong.top/xcx/daohang', //仅为示例，并非真实的接口地址
  success:function(dao) {
-   console.log(dao);
+  //  console.log(dao);
    _this.setData({
      daohang:dao.data.data
     
@@ -64,7 +64,7 @@ cate:function(res){
           cate_id:res.target.dataset.cate_id
     },
     success:function(dao) {
-     console.log(dao);
+    //  console.log(dao);
      _this.setData({
        list:dao.data.data,
        bian:res.target.dataset.cate_id

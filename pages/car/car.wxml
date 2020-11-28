@@ -2,7 +2,7 @@
   <!-- 头部开始  -->
   <view class="cart-top">
     <view class="top-left">共<text  style="color:red">{{goodsList.length}}</text>件商品</view>
-    <view class="top-right">删除</view>
+    <view class="top-right" bindtap="shan">删除</view>
   </view>
   <!-- 头部结束 -->   
 
@@ -11,7 +11,7 @@
     <view wx:for="{{goodsList}}" wx:key="index" class="item {{  index+1 == goodsList.length?'lishang':'' }} " >
 
       <checkbox-group>
-        <checkbox value="1" checked="{{isSelectAll}}"></checkbox>
+        <checkbox value="1"  data-id="{{goodsList[index].goods_id}}" checked="{{goodsList[index].checked}}" bindtap="Select"></checkbox>
       </checkbox-group>
       <view class="pic">
         <image
@@ -20,13 +20,13 @@
       </view>
       <view class="content">
         <view class="title">{{item.goods_name}}</view>
-        <!-- <view class="desc">品牌</view> -->
         <view class="price-info">
           <view class="price">${{item.goods_price * item.goods_num}}</view>
-          <view class="number">
-            <view class="decr" bindtap="decr">-</view>
+          <view class="number"> 
+            <!-- ==1?'kk':decr -->
+            <view class="decr"  data-id="{{item.goods_id}}" data-num="{{item.goods_num}}"   bindtap="{{item.goods_num==1?'xiao':'decr'}}">-</view>
             <input value="{{item.goods_num}}" class="num" bindtap="num"></input>
-            <view class="incr" bindtap="incr">+</view>
+            <view class="incr"  data-id="{{item.goods_id}}" data-num="{{item.goods_num}}" bindtap="incr">+</view>
           </view>
         </view>
       </view>
@@ -44,7 +44,7 @@
     </view>
     <view class="total-price">
       总价：
-      <text class="price">$0</text>
+      <text class="price">${{total}}</text>
     </view>
     <view class="btn btn-default">去结算</view>
   </view>
